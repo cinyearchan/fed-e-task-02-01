@@ -4,6 +4,31 @@ const loadGruntTasks = require('load-grunt-tasks')
 
 module.exports = grunt => {
   grunt.initConfig({
+    connect: {
+      server: {
+        options: {
+          port: 9000,
+          useAvailablePort: true,
+          hostname: '*',
+          keepalive: true,
+          open: true,
+          livereload: 35729,
+          base: ['dist/']
+        }
+      }
+    },
+    watch: {
+      options: {
+        livereload: 35729
+      },
+      server: {
+        files: ['src/assets/styles/*.scss', 'src/assets/scripts/*.js'],
+        tasks: ['sass', 'copy', 'concat', 'uglify', 'cssmin', 'babel']
+      }
+    },
+    jshint: {
+      all: ['src/assets/scripts/main.js']
+    },
     // 模板引擎
     swig: {
       options: {
@@ -17,7 +42,23 @@ module.exports = grunt => {
             },
             description: 'this is a fed grunt task project'
           },
-          date: '2020-06-03'
+          date: '2020-06-03',
+          menus: [
+            {
+              name: 'menu',
+              link: '#',
+              children: [
+                {
+                  name: 'home',
+                  link: 'index.html'
+                },
+                {
+                  name: 'about',
+                  link: 'about.html'
+                }
+              ]
+            }
+          ]
         },
         cache: false,
         templatePath: undefined

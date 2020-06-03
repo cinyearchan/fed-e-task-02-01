@@ -21,5 +21,8 @@
 
 2. 尝试使用 Gulp 完成项目的自动化构建
 
+   
+
 3. 使用 Grunt 完成项目的自动化构建
 
+   [完成后项目地址 grunt-page](https://github.com/cinyearchan/fed-e-task-02-01/tree/master/code/grunt)

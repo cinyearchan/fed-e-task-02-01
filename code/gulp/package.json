@@ -24,9 +24,9 @@
     "url": "https://zce.me"
   },
   "scripts": {
-    "clean": "gulp clean",
-    "build": "gulp build",
-    "develop": "gulp develop"
+    "clean": "cinyear-pages clean",
+    "build": "cinyear-pages build",
+    "develop": "cinyear-pages develop"
   },
   "browserslist": [
     "last 1 version",
@@ -40,8 +40,7 @@
     "popper.js": "1.16.1"
   },
   "devDependencies": {
-    "gulp": "^4.0.2",
-    "gulp-cli": "^2.3.0"
+    "cinyear-pages": "^0.3.0"
   },
   "engines": {
     "node": ">=6"

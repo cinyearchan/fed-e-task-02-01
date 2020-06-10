@@ -198,6 +198,7 @@ module.exports = grunt => {
   loadGruntTasks(grunt)
 
   grunt.registerTask('default', ['sass', 'babel', 'copy'])
+  grunt.registerTask('compile', ['build', 'connect'])
   grunt.registerTask('build', [
     'clean:beforeBuild',
     'swig',

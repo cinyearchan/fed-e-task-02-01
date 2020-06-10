@@ -25,8 +25,7 @@
   },
   "scripts": {
     "clean": "grunt clean",
-    "hint": "grunt jshint",
-    "serve": "grunt build && grunt connect",
+    "serve": "grunt compile",
     "build": "grunt build"
   },
   "browserslist": [
